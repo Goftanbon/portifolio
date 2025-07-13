@@ -220,7 +220,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <motion.div
-              className="text-xl font-bold text-gray-900 dark:text-white"
+              className="text-xl font-bold text-gray-900 dark:text-white truncate max-w-[180px] sm:max-w-full"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
             >
@@ -271,24 +271,24 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* UPDATED: Mobile Menu */}
+        {/* Mobile Menu - Updated for better mobile experience */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
+              className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800 shadow-lg"
             >
-              <div className="px-4 py-2 space-y-2">
+              <div className="px-4 py-4 space-y-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.text}
                     href={link.href}
-                    className={`block w-full text-left py-2 transition-colors ${
+                    className={`block w-full text-left py-3 px-4 rounded-lg transition-colors ${
                       activeSection === link.id
-                        ? "text-purple-500 dark:text-purple-400 font-semibold"
-                        : "text-gray-600 dark:text-gray-300 hover:text-purple-500"
+                        ? "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold"
+                        : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                     }`}
                     onClick={() => {
                       setActiveSection(link.id);
@@ -383,14 +383,13 @@ const Portfolio = () => {
               <span className="text-sm font-bold text-purple-600 dark:text-purple-400 tracking-wide uppercase">
                 Introduction
               </span>
-              {/* The id="overview" is the target for the "About" link */}
               <h2
                 id="overview"
                 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mt-4 mb-6"
               >
                 Overview.
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 h-[234px] w-[950px]">
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 max-w-full h-auto md:h-[234px] md:w-[950px] overflow-auto">
                 I'm a senior software engineer with a strong focus on backend
                 development. Since teaching myself web development back in 2018,
                 I've gained solid experience building high-quality, scalable,
@@ -422,12 +421,13 @@ const Portfolio = () => {
           </div>
 
           {/* Experience Timeline Section */}
-          {/* NEW: Added id="experiences" here for the "Work" link to target */}
           <div id="experiences" className="mt-16">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-12 text-center">
               Experience Timeline
             </h3>
-            <div className="relative">
+            
+            {/* Desktop Timeline (hidden on mobile) */}
+            <div className="relative hidden md:block">
               <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-purple-200 dark:bg-purple-800 z-0"></div>
               <div className="space-y-24">
                 {experiences.map((exp, index) => (
@@ -464,7 +464,7 @@ const Portfolio = () => {
                           {exp.period}
                         </div>
                       </div>
-                      <div className="w-1/2 $`{index % 2 === 0 ? 'pl-8' : 'pr-8'}`">
+                      <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}>
                         <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-700 relative">
                           <div className="absolute top-0 transform -translate-y-1/2 left-6 w-16 h-16 rounded-lg bg-white dark:bg-gray-700 shadow-md flex items-center justify-center p-2 border border-gray-200 dark:border-gray-600">
                             {exp.logo ? (
@@ -474,8 +474,7 @@ const Portfolio = () => {
                                 className="max-w-full max-h-full object-contain"
                                 onError={(e) => {
                                   e.target.onerror = null;
-                                  e.target.src =
-                                    "/assets/images/placeholder-logo.png";
+                                  e.target.src = "/assets/images/placeholder-logo.png";
                                 }}
                               />
                             ) : (
@@ -513,6 +512,71 @@ const Portfolio = () => {
                   </motion.div>
                 ))}
               </div>
+            </div>
+            
+            {/* Mobile Experience Cards (visible only on mobile) */}
+            <div className="md:hidden space-y-6">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-700 relative"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-white dark:bg-gray-700 shadow-md flex items-center justify-center p-2 border border-gray-200 dark:border-gray-600 mr-4">
+                      {exp.logo ? (
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="max-w-full max-h-full object-contain"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = "/assets/images/placeholder-logo.png";
+                          }}
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-200 dark:bg-gray-600 rounded flex items-center justify-center text-gray-500 dark:text-gray-400 text-xs font-medium">
+                          {exp.company.substring(0, 2).toUpperCase()}
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {exp.title}
+                      </h4>
+                      <p className="text-purple-600 dark:text-purple-400 font-medium">
+                        {exp.company}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-full text-sm font-medium text-purple-600 dark:text-purple-400">
+                      {exp.period}
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {exp.description}
+                  </p>
+                  
+                  {exp.responsibilities && (
+                    <div className="mt-4">
+                      <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Key Responsibilities:
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-300 text-sm">
+                        {exp.responsibilities.map((resp, idx) => (
+                          <li key={idx}>{resp}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
             </div>
           </div>
 
