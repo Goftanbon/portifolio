@@ -305,7 +305,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 dark:from-purple-900/40 dark:via-blue-900/40 dark:to-indigo-900/40"></div>
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -347,7 +347,7 @@ const Portfolio = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-gray-900 dark:text-white">Hi, I'm </span>
               <span className="gradient-text">Goftanbon Keno</span>
             </h1>
