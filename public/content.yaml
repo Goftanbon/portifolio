@@ -1,0 +1,184 @@
+site:
+  name: "Goftanbon Keno"
+  fullName: "Goftanbon Keno Wakjira"
+  role: "Full Stack Developer"
+  tagline: "React · Next.js · Node.js · NestJS · TypeScript"
+  location: "Addis Ababa, Ethiopia"
+  email: "goftanbonkeno@gmail.com"
+  phone: "+251901057329"
+  phoneDisplay: "+251 901 057 329"
+  github: "https://github.com/Goftanbon"
+  linkedin: "https://linkedin.com/in/goftanbon-keno-me"
+  resumeUrl: "/assets/documents/goftanbonKenoCv.pdf"
+
+nav:
+  - { id: about, text: "About", href: "#about" }
+  - { id: experience, text: "Experience", href: "#experience" }
+  - { id: work, text: "Work", href: "#work" }
+  - { id: contact, text: "Contact", href: "#contact" }
+
+hero:
+  eyebrow: "Backend Engineer @ Tamcon Software Solution"
+  headline: "I build backend systems that don't go down."
+  subtitle: "Full-stack engineer specializing in Node.js, NestJS and TypeScript — currently engineering core services for Ethiopia's National Lottery platform, processing 2M+ transactions a day."
+  ctaPrimary: { text: "View my work", href: "#work" }
+  ctaSecondary: { text: "Get in touch", href: "#contact" }
+  panel:
+    filename: "profile.json"
+    fields:
+      - { key: "role", value: "Backend Engineer" }
+      - { key: "company", value: "Tamcon Software Solution" }
+      - { key: "stack", value: "[\"NestJS\", \"TypeScript\", \"PostgreSQL\", \"Redis\"]" }
+      - { key: "scale", value: "\"2M+ transactions / day\"" }
+      - { key: "uptime", value: "\"99.9%\"" }
+      - { key: "experience", value: "\"3+ years\"" }
+
+about:
+  eyebrow: "01 — About"
+  title: "Who I am"
+  body: "Backend Engineer with 3+ years of experience building and operating production backend systems across gaming, delivery, e-commerce and enterprise platforms. I'm a backend engineer on Ethiopia's National Lottery game platform, and I've shipped production NestJS backends including a ride-hailing platform live on the Google Play Store and App Store — comfortable owning a feature end-to-end, from API design to production monitoring."
+  stats:
+    - { value: "3+", label: "years in production systems" }
+    - { value: "2M+", label: "transactions/day on current platform" }
+    - { value: "7", label: "companies & contracts shipped to prod" }
+  resumeLinkText: "Download full résumé (PDF)"
+  education:
+    degree: "BSc in Computer Science"
+    school: "St. Mary's University"
+    period: "2020 – 2025"
+    details: "CGPA 3.34 · Best Thesis"
+  certificates:
+    - { title: "JavaScript React.js", issuer: "Col John Robinson (American Center)" }
+    - { title: "Introduction to Machine Learning", issuer: "Google" }
+
+skills:
+  eyebrow: "02 — What I do"
+  title: "Core capabilities"
+  items:
+    - icon: code
+      title: "Full-Stack Web"
+      description: "Production UIs and APIs with React, Next.js and Tailwind CSS, backed by NestJS and .NET Core services."
+    - icon: server
+      title: "Backend & APIs"
+      description: "RESTful API design, event-driven architecture with NATS and Redis Pub/Sub, JWT/OAuth auth and RBAC."
+    - icon: database
+      title: "Databases & Caching"
+      description: "PostgreSQL, MySQL, MongoDB and Redis, with Prisma and TypeORM for type-safe data access."
+    - icon: cloud
+      title: "Cloud & DevOps"
+      description: "Docker, AWS (EC2, Lambda, RDS, S3), Azure, Nomad and Grafana, with CI/CD pipelines sustaining 99.9% uptime."
+
+experience:
+  eyebrow: "03 — Experience"
+  title: "Where I've worked"
+  items:
+    - role: "Backend Engineer"
+      company: "Tamcon Software Solution"
+      period: "Nov 2025 — Present"
+      logo: "/assets/images/company-logos/nova.jpeg"
+      highlights:
+        - "Engineer core services for the Ethiopian National Lottery game platform processing 2M+ transactions per day across 5+ third-party game providers, managing player wallets and game sessions."
+        - "Cut average API response times by ~40% under peak traffic by introducing Redis caching and query optimization; integrated 5 payment gateways with secure, idempotent payment workflows."
+        - "Own architectural decisions for the Tamcon Game Manager platform, defining service boundaries and integration patterns; AWS infrastructure sustains 99.9% uptime."
+      stack: ["Node.js", "TypeScript", "Redis", "PostgreSQL", "Prisma ORM", "Docker", "AWS", "Grafana", "Nomad"]
+    - role: "Full Stack Developer (.NET Core & React)"
+      company: "YoD Business Solution"
+      period: "Jun 2025 — Nov 2025"
+      logo: null
+      highlights:
+        - "Led full-stack development of enterprise ERP and Student Management Systems; built and optimized a React-based web application for ERP Light, deployed across multiple industrial enterprises."
+        - "Designed backend APIs using .NET Core hosted on Azure, and mentored junior developers through technical design reviews."
+      stack: ["C#", ".NET Core", "React.js", "Azure", "REST APIs"]
+    - role: "Frontend Developer (Part-time)"
+      company: "Beauty Salon Reservation App"
+      period: "2025"
+      logo: null
+      highlights:
+        - "Built a responsive, SEO-friendly booking frontend in Next.js/TypeScript with real-time time-slot updates and Firebase-authenticated role-based access."
+      stack: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase Auth"]
+    - role: "Backend Developer (Contract)"
+      company: "Navigo — Ride-Hailing & Delivery App"
+      period: "Feb 2025 — Jun 2025"
+      logo: null
+      highlights:
+        - "Developed the NestJS (TypeScript) backend for a ride-hailing platform live on the Play Store and App Store, covering ride booking, delivery, and transaction tracking, with JWT auth and RBAC."
+        - "Contributed frontend work on the Next.js admin panel used to manage rides, drivers, and platform operations."
+      stack: ["NestJS", "TypeScript", "Next.js", "JWT", "RBAC", "Firebase Cloud Messaging"]
+    - role: "Backend Developer (Contract)"
+      company: "Ethio Delivery & EthioBestPrice"
+      period: "Jun 2024 — Feb 2025"
+      logo: null
+      highlights:
+        - "Built event-driven NestJS backends (NATS, Redis Pub/Sub, PostgreSQL/TypeORM) for a delivery platform and a scalable e-commerce backend for product, order, and payment workflows."
+      stack: ["NestJS", "TypeScript", "PostgreSQL", "TypeORM", "NATS", "Firebase Auth"]
+    - role: "Backend Developer (Node.js / TypeScript)"
+      company: "NovaComputech"
+      period: "2023 — 2024"
+      logo: "/assets/images/company-logos/nova.jpeg"
+      highlights:
+        - "Shipped RESTful APIs for a new product line, improving endpoint performance by ~30% and cutting manual testing time by ~50% through automated Postman/Insomnia test suites."
+      stack: ["Node.js", "Express.js", "TypeScript", "REST APIs"]
+
+projects:
+  eyebrow: "04 — Selected work"
+  title: "Projects"
+  items:
+    - title: "Admin Page — EthioDelivery"
+      featured: true
+      image: "/assets/images/admin page.png"
+      description: "Operations dashboard backed by an event-driven NestJS backend — real-time order creation, tracking, and role-based access for customers, drivers and admins."
+      tech: ["NestJS", "TypeORM", "PostgreSQL", "NATS", "Firebase Auth"]
+      demoLink: "https://admin.ethiodelivery.com"
+      codeLink: null
+    - title: "Navigo — Ride-Hailing & Delivery"
+      featured: false
+      image: null
+      description: "NestJS backend for a ride-hailing platform live on the Play Store and App Store — ride booking, delivery management, JWT auth, RBAC and real-time trip updates via FCM."
+      tech: ["NestJS", "TypeScript", "JWT", "RBAC", "Firebase Cloud Messaging"]
+      demoLink: null
+      codeLink: null
+    - title: "EthioBestPrice"
+      featured: false
+      image: "/assets/images/ethioBestPrice.png"
+      description: "Scalable NestJS backend powering product listings, carts, orders and payment workflows, with FCM notifications for order updates."
+      tech: ["NestJS", "Firebase Auth", "Firebase Cloud Messaging", "REST APIs"]
+      demoLink: "https://ebp-http.codepointcreatives.com/"
+      codeLink: null
+    - title: "Eat Addis"
+      featured: false
+      image: "/assets/images/eat addis.jpg"
+      description: "Web and Telegram-bot food ordering platform connecting users with local restaurants for delivery."
+      tech: ["React", "Node.js", "Flutter"]
+      demoLink: "https://t.me/EatAddisBot"
+      codeLink: null
+    - title: "Sheger Bingo"
+      featured: false
+      image: "/assets/images/shager.png"
+      description: "Telegram-based bingo game platform with real-time play and session management."
+      tech: ["NestJS", "React", "Node.js"]
+      demoLink: "https://t.me/ShegerBingooBot"
+      codeLink: null
+    - title: "BetLehulu"
+      featured: false
+      image: "/assets/images/renting.png"
+      description: "Property rental platform covering listings, rent payments and property management, integrated with Chapa."
+      tech: ["Node.js", "React", "Chapa"]
+      demoLink: "https://betlehulu.meyotaceremonial.com/"
+      codeLink: "https://github.com/Goftanbon/BetLeHul_Senior.git"
+    - title: "Mayota Ceremonial"
+      featured: false
+      image: "/assets/images/cermonial.png"
+      description: "Rental and catering-inventory management platform with scheduled jobs for recurring operations."
+      tech: ["TypeScript", "Node.js", "Cron Jobs"]
+      demoLink: "https://meyotaceremonial.com/"
+      codeLink: "https://github.com/Goftanbon/CatringInventory.git"
+
+contact:
+  eyebrow: null
+  title: "Let's build something real."
+  subtitle: "Open to freelance work and new opportunities. Usually replies within a day."
+  ctaPrimary: { text: "Email me", href: "mailto:goftanbonkeno@gmail.com" }
+  ctaSecondary: { text: "Call me", href: "tel:+251901057329" }
+
+footer:
+  copyright: "© 2026 Goftanbon Keno"

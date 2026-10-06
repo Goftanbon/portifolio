@@ -5,16 +5,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: "#f0f9ff",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-          900: "#4c1d95",
+        accent: {
+          DEFAULT: "#C8FF3D",
+          muted: "#9FD600",
+          contrast: "#5C7A00",
         },
-        border: "#e2e8f0",      // Adding border color
-        background: "#ffffff", // Adding background color
-        foreground: "#0f172a", // Adding foreground (text) color
+        ink: "#0D0E10",
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', "sans-serif"],
+        sans: ['"Work Sans"', "sans-serif"],
       },
       animation: {
         float: "float 6s ease-in-out infinite",
