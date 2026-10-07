@@ -75,7 +75,7 @@ experience:
     - role: "Backend Engineer"
       company: "Tamcon Software Solution"
       period: "Nov 2025 — Present"
-      logo: "/assets/images/company-logos/nova.jpeg"
+      logo: "/assets/images/company-logos/tamcon.jpeg"
       highlights:
         - "Engineer core services for the Ethiopian National Lottery game platform processing 2M+ transactions per day across 5+ third-party game providers, managing player wallets and game sessions."
         - "Cut average API response times by ~40% under peak traffic by introducing Redis caching and query optimization; integrated 5 payment gateways with secure, idempotent payment workflows."
@@ -84,15 +84,15 @@ experience:
     - role: "Full Stack Developer (.NET Core & React)"
       company: "YoD Business Solution"
       period: "Jun 2025 — Nov 2025"
-      logo: null
+      logo: "/assets/images/company-logos/YOD-Business-Solutions-Logo-White.png"
       highlights:
         - "Led full-stack development of enterprise ERP and Student Management Systems; built and optimized a React-based web application for ERP Light, deployed across multiple industrial enterprises."
         - "Designed backend APIs using .NET Core hosted on Azure, and mentored junior developers through technical design reviews."
       stack: ["C#", ".NET Core", "React.js", "Azure", "REST APIs"]
     - role: "Frontend Developer (Part-time)"
-      company: "Beauty Salon Reservation App"
+      company: "sweaven solutions — Booking Platform"
       period: "2025"
-      logo: null
+      logo: "/assets/images/company-logos/sweaven.jpeg"
       highlights:
         - "Built a responsive, SEO-friendly booking frontend in Next.js/TypeScript with real-time time-slot updates and Firebase-authenticated role-based access."
       stack: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase Auth"]
